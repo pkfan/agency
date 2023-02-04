@@ -1,0 +1,2161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pkfan</title>
+    <link rel="stylesheet" href="/agency/assets/index-b46144e2.css">
+  </head>
+  <body class="relative debug-screens bg-slate-200 overflow-x-hidden">
+
+    <div id="pkfan-model" class="fixed top-0 left-0 z-50 scale-0 origin-top transition-all duration-300 bg-black/80 w-screen h-screen flex justify-center items-center">
+      <div class="relative  max-w-xl m-16 p-16 space-y-8 bg-white shadow-xl shadow-gray-500">
+      
+        <div id="pkfan-close" class="cursor-pointer absolute right-4 top-4 w-8 h-8" >
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M464 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-83.6 290.5c4.8 4.8 4.8 12.6 0 17.4l-40.5 40.5c-4.8 4.8-12.6 4.8-17.4 0L256 313.3l-66.5 67.1c-4.8 4.8-12.6 4.8-17.4 0l-40.5-40.5c-4.8-4.8-4.8-12.6 0-17.4l67.1-66.5-67.1-66.5c-4.8-4.8-4.8-12.6 0-17.4l40.5-40.5c4.8-4.8 12.6-4.8 17.4 0l66.5 67.1 66.5-67.1c4.8-4.8 12.6-4.8 17.4 0l40.5 40.5c4.8 4.8 4.8 12.6 0 17.4L313.3 256l67.1 66.5z"></path></svg>
+        </div>
+        <h5>Do you want to build something amazing, I can help?</h5>
+        <a
+                  href="https://www.fiverr.com/pkfan_amir"
+                  class="pulse w-56 block cursor-pointer text-white bg-gradient-to-tr from-secondary to-primary hover:from-primary hover:to-secondary py-3 text-center rounded-md font-bold active:-translate-y-1 transition-all duration-300 uppercase"
+                >
+                  Hire me on fiverr
+                </a>
+      </div>
+    </div>
+
+    <!-- theme colors js  -->
+    <div
+      class="fixed bottom-4 right-8 z-50 border-2 border-black p-3 bg-white/30 rounded-md "
+    >
+    <div class="flex justify-center items-center space-x-3">
+
+      <form action="http://amir.com" id="change-form">
+        <input id="change-color1" type="text" class=" w-20 h-4 py-4 bg-black text-white" placeholder="#000000" aria-label="none" />
+        <input id="change-color2" type="text" class=" w-20 h-4 py-4 bg-black text-white" placeholder="#fffeee" aria-label="none" />
+        <button type="submit" id="change-button" class=" bg-white p-1 rounded-md hover:opacity-80" >Change</button>
+      </form>
+      
+    </div>
+    <div class="flex justify-between items-center space-x-3">
+
+      <h6 class="uppercase">Change color</h6>
+      <div
+        id="red-theme"
+        class="h-9 w-9 bg-red-400 hover:bg-red-500 rounded-full cursor-pointer"
+      ></div>
+      <div
+        id="blue-theme"
+        class="h-9 w-9 bg-blue-400 hover:bg-blue-500 rounded-full cursor-pointer"
+      ></div>
+      <div
+        id="green-theme"
+        class="h-9 w-9 bg-green-400 hover:bg-blue-500 rounded-full cursor-pointer"
+      ></div>
+    </div>
+    </div>
+
+    <!-- body overlay  -->
+    <div
+      id="body-overlay-dark"
+      class="hidden w-screen h-screen fixed top-0 left-0 z-50 bg-black opacity-95"
+    ></div>
+    <!-- mobile menu sidebar  -->
+    <div
+      id="sidebar"
+      class="w-80 h-full overflow-y-auto fixed -left-[330px] transition-all duration-300 ease-in-out top-0 z-50 flex flex-col justify-between items-center text-white bg-gradient-to-t from-primary to-secondary border-r-4 border-gray-200 shadow-xl shadow-white"
+    >
+      <!-- close icon  -->
+      <div
+        id="close-sidebar"
+        class="fixed -left-[310px] z-50 top-4 transition-all duration-1000 ease-in-out"
+      >
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 16 16"
+          height="28px"
+          width="28px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
+          ></path>
+        </svg>
+      </div>
+      <ul
+        class="w-full uppercase flex flex-col items-center justify-center font-bold space-y-6 pt-16"
+      >
+        <li class="sidebar-active">
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">about</a>
+        </li>
+        <li>
+          <a href="#">features</a>
+        </li>
+        <li>
+          <a href="#">gallary</a>
+        </li>
+        <li>
+          <a href="#">testimonial</a>
+        </li>
+        <li>
+          <a href="#">pricing</a>
+        </li>
+        <li>
+          <a href="#">blog</a>
+        </li>
+        <li>
+          <a href="#">contact</a>
+        </li>
+      </ul>
+      <!-- social icons -->
+      <div class="flex items-center space-x-3 text-primary py-8">
+        <!-- facebook -->
+        <a
+          href="#"
+          class="rounded-full w-8 h-8 bg-white flex justify-center items-center hover:-translate-y-1 transition-all duration-300"
+        >
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 320 512"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+            ></path>
+          </svg>
+        </a>
+        <!-- twitter -->
+        <a
+          href="#"
+          class="rounded-full w-8 h-8 bg-white flex justify-center items-center hover:-translate-y-1 transition-all duration-300"
+        >
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+            ></path>
+          </svg>
+        </a>
+        <!-- vimeo -->
+        <a
+          href="#"
+          class="rounded-full w-8 h-8 bg-white flex justify-center items-center hover:-translate-y-1 transition-all duration-300"
+        >
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.992 4.204c-.071 1.556-1.158 3.687-3.262 6.393-2.175 2.829-4.016 4.243-5.522 4.243-.933 0-1.722-.861-2.367-2.583L3.55 7.523C3.07 5.8 2.556 4.94 2.007 4.94c-.118 0-.537.253-1.254.754L0 4.724a209.56 209.56 0 0 0 2.334-2.081c1.054-.91 1.845-1.388 2.373-1.437 1.243-.123 2.01.728 2.298 2.553.31 1.968.526 3.19.646 3.666.36 1.631.756 2.446 1.186 2.445.334 0 .836-.53 1.508-1.587.671-1.058 1.03-1.863 1.077-2.415.096-.913-.263-1.37-1.077-1.37a3.022 3.022 0 0 0-1.185.261c.789-2.573 2.291-3.825 4.508-3.756 1.644.05 2.419 1.117 2.324 3.2z"
+            ></path>
+          </svg>
+        </a>
+        <!-- youtube -->
+        <a
+          href="#"
+          class="rounded-full w-8 h-8 bg-white flex justify-center items-center hover:-translate-y-1 transition-all duration-300"
+        >
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 1024 1024"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M941.3 296.1a112.3 112.3 0 0 0-79.2-79.3C792.2 198 512 198 512 198s-280.2 0-350.1 18.7A112.12 112.12 0 0 0 82.7 296C64 366 64 512 64 512s0 146 18.7 215.9c10.3 38.6 40.7 69 79.2 79.3C231.8 826 512 826 512 826s280.2 0 350.1-18.8c38.6-10.3 68.9-40.7 79.2-79.3C960 658 960 512 960 512s0-146-18.7-215.9zM423 646V378l232 133-232 135z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <header>
+      <section class="text-white bg-gradient-to-tr from-secondary to-primary">
+        <div class="max-w-7xl mx-auto p-4 flex justify-between items-center">
+          <!-- mobile menu icon  -->
+          <div id="sidebar-icon" class="cursor-pointer md:hidden">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              version="1.1"
+              viewBox="0 0 17 17"
+              height="24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g></g>
+              <path
+                d="M16 2v2h-11v-2h11zM5 9h11v-2h-11v2zM5 14h11v-2h-11v2zM2 2c-0.552 0-1 0.447-1 1s0.448 1 1 1 1-0.447 1-1-0.448-1-1-1zM2 7c-0.552 0-1 0.447-1 1s0.448 1 1 1 1-0.447 1-1-0.448-1-1-1zM2 12c-0.552 0-1 0.447-1 1s0.448 1 1 1 1-0.447 1-1-0.448-1-1-1z"
+              ></path>
+            </svg>
+          </div>
+
+          <!-- logo -->
+          <div class="flex h-12">
+            <img data-src="/agency/assets/logo-5b37b077.svg" alt="" />
+          </div>
+
+          <!-- social icons -->
+          <div class="hidden md:flex items-center space-x-3 text-primary">
+            <!-- facebook -->
+            <a
+              href="#"
+              class="rounded-full w-8 h-8 bg-white flex justify-center items-center hover:-translate-y-1 transition-all duration-300"
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 320 512"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                ></path>
+              </svg>
+            </a>
+            <!-- twitter -->
+            <a
+              href="#"
+              class="rounded-full w-8 h-8 bg-white flex justify-center items-center hover:-translate-y-1 transition-all duration-300"
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                ></path>
+              </svg>
+            </a>
+            <!-- vimeo -->
+            <a
+              href="#"
+              class="rounded-full w-8 h-8 bg-white flex justify-center items-center hover:-translate-y-1 transition-all duration-300"
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.992 4.204c-.071 1.556-1.158 3.687-3.262 6.393-2.175 2.829-4.016 4.243-5.522 4.243-.933 0-1.722-.861-2.367-2.583L3.55 7.523C3.07 5.8 2.556 4.94 2.007 4.94c-.118 0-.537.253-1.254.754L0 4.724a209.56 209.56 0 0 0 2.334-2.081c1.054-.91 1.845-1.388 2.373-1.437 1.243-.123 2.01.728 2.298 2.553.31 1.968.526 3.19.646 3.666.36 1.631.756 2.446 1.186 2.445.334 0 .836-.53 1.508-1.587.671-1.058 1.03-1.863 1.077-2.415.096-.913-.263-1.37-1.077-1.37a3.022 3.022 0 0 0-1.185.261c.789-2.573 2.291-3.825 4.508-3.756 1.644.05 2.419 1.117 2.324 3.2z"
+                ></path>
+              </svg>
+            </a>
+            <!-- youtube -->
+            <a
+              href="#"
+              class="rounded-full w-8 h-8 bg-white flex justify-center items-center hover:-translate-y-1 transition-all duration-300"
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 1024 1024"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M941.3 296.1a112.3 112.3 0 0 0-79.2-79.3C792.2 198 512 198 512 198s-280.2 0-350.1 18.7A112.12 112.12 0 0 0 82.7 296C64 366 64 512 64 512s0 146 18.7 215.9c10.3 38.6 40.7 69 79.2 79.3C231.8 826 512 826 512 826s280.2 0 350.1-18.8c38.6-10.3 68.9-40.7 79.2-79.3C960 658 960 512 960 512s0-146-18.7-215.9zM423 646V378l232 133-232 135z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- register -->
+          <a
+            href="#"
+            class="uppercase bg-black py-2 px-4 sm:px-12 sm:py-3 rounded-full rounded-tr-none bg-no-repeat bg-contain hover:-translate-y-1 transition-all duration-300"
+            style="background-image: url(/agency/assets/nav-button-clip-0bf75eee.png)"
+            >register</a
+          >
+        </div>
+      </section>
+      <nav class="hidden md:block p-3 bg-white">
+        <ul
+          class="uppercase flex items-center justify-center space-x-6 font-bold"
+        >
+          <li class="hover:text-primary transition-all duration-300">
+            <a href="#">Home</a>
+          </li>
+          <li class="hover:text-primary transition-all duration-300">
+            <a href="#">about</a>
+          </li>
+          <li class="hover:text-primary transition-all duration-300">
+            <a href="#">features</a>
+          </li>
+          <li class="hover:text-primary transition-all duration-300">
+            <a href="#">gallary</a>
+          </li>
+          <li class="hover:text-primary transition-all duration-300">
+            <a href="#">testimonial</a>
+          </li>
+          <li class="hover:text-primary transition-all duration-300">
+            <a href="#">pricing</a>
+          </li>
+          <li class="hover:text-primary transition-all duration-300">
+            <a href="#">blog</a>
+          </li>
+          <li class="hover:text-primary transition-all duration-300">
+            <a href="#">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- hero section  -->
+    <section
+      class="relative z-10 w-full h-[400px] xl:h-[550px] xxl:h-[650px] bg-gray-500 bg-no-repeat bg-cover text-white"
+      style="background-image: url(/agency/assets/hero-1280x650-e99a10a8.webp)"
+    >
+      <div
+        data-aos="slide-down"
+        data-aos-offset="200"
+        data-aos-delay="0"
+        data-aos-duration="400"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="true"
+        class="max-w-7xl mx-auto w-full h-full p-4 uppercase flex flex-col justify-center items-center space-y-4"
+      >
+        <p data-aos="fade-in">A MEETUP AND CONFERENCE BY</p>
+        <h1 data-aos="fade-in" class="pb-4">ONLINE COMUNITY</h1>
+        <a
+          href="#"
+          class="pulse bg-gradient-to-tr from-secondary to-primary hover:from-primary hover:to-secondary py-4 px-10 rounded-full font-bold active:-translate-y-1 transition-all duration-300"
+        >
+          BUY TICKET NOW
+        </a>
+      </div>
+      <!-- layout gray  -->
+      <div
+        class="absolute top-0 left-0 -z-10 w-full h-full bg-black opacity-90"
+      ></div>
+
+      <!-- count down timer -->
+      <div
+        id="count-down-timer"
+        class="absolute -bottom-8 sm:-bottom-12 left-[50%] -translate-x-[50%] w-full flex justify-center items-center flex-wrap sm:flex-nowrap text-sm font-bold uppercase space-y-2 sm:space-y-0 space-x-2 sm:space-x-12"
+      >
+        <div
+          class="w-20 h-16 sm:w-24 sm:h-24 flex flex-col justify-center items-center border-[3px] border-white rounded-tl-2xl rounded-br-2xl bg-black bg-no-repeat bg-cover overflow-hidden"
+          style="background-image: url(/agency/assets/nav-button-clip-0bf75eee.png)"
+        >
+          <span>days</span>
+          <h4 id="days">20</h4>
+        </div>
+        <div
+          class="w-20 h-16 sm:w-24 sm:h-24 flex flex-col justify-center items-center border-[3px] border-white rounded-tl-2xl rounded-br-2xl bg-black bg-no-repeat bg-cover overflow-hidden"
+          style="background-image: url(/agency/assets/nav-button-clip-0bf75eee.png)"
+        >
+          <span>hours</span>
+          <h4 id="hours">11</h4>
+        </div>
+        <div
+          class="w-20 h-16 sm:w-24 sm:h-24 flex flex-col justify-center items-center border-[3px] border-white rounded-tl-2xl rounded-br-2xl bg-black bg-no-repeat bg-cover overflow-hidden"
+          style="background-image: url(/agency/assets/nav-button-clip-0bf75eee.png)"
+        >
+          <span>minutes</span>
+          <h4 id="minutes">21</h4>
+        </div>
+        <div
+          class="w-20 h-16 sm:w-24 sm:h-24 flex flex-col justify-center items-center border-[3px] border-white rounded-tl-2xl rounded-br-2xl bg-black bg-no-repeat bg-cover overflow-hidden"
+          style="background-image: url(/agency/assets/nav-button-clip-0bf75eee.png)"
+        >
+          <span>seconds</span>
+          <h4 id="seconds">41</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- about events section  -->
+    <section class="relative z-0 bg-white">
+      <div
+        class="max-w-7xl mx-auto px-4 pt-16 md:pt-24 lg:pt-36 pb-12 md:pb-20 lg:pb-24 flex flex-col lg:flex-row justify-center"
+      >
+        <div
+          data-aos="slide-right"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="false"
+          data-aos-once="true"
+          class="w-full lg:w-1/2 p-4 space-y-8"
+        >
+          <h3 class="after-line">About The Event</h3>
+          <p>
+            This is a anual event for online comunity, dolor sit amet,
+            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim minim veniam, quis nostrud
+            exercitat ullamco laboris nisi ut aliquip ex ea.
+          </p>
+          <div
+            class="flex flex-wrap sm:flex-nowrap lg:justify-between sm:space-x-4 items-center"
+          >
+            <ul class="space-y-2">
+              <li class="flex items-center space-x-2">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  baseProfile="tiny"
+                  viewBox="0 0 24 24"
+                  height="24px"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-primary"
+                >
+                  <path
+                    d="M16.972 6.251c-.967-.538-2.185-.188-2.72.777l-3.713 6.682-2.125-2.125c-.781-.781-2.047-.781-2.828 0-.781.781-.781 2.047 0 2.828l4 4c.378.379.888.587 1.414.587l.277-.02c.621-.087 1.166-.46 1.471-1.009l5-9c.537-.966.189-2.183-.776-2.72z"
+                  ></path>
+                </svg>
+                <span>Lorem ipsum dolor sit amet</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  baseProfile="tiny"
+                  viewBox="0 0 24 24"
+                  height="24px"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-primary"
+                >
+                  <path
+                    d="M16.972 6.251c-.967-.538-2.185-.188-2.72.777l-3.713 6.682-2.125-2.125c-.781-.781-2.047-.781-2.828 0-.781.781-.781 2.047 0 2.828l4 4c.378.379.888.587 1.414.587l.277-.02c.621-.087 1.166-.46 1.471-1.009l5-9c.537-.966.189-2.183-.776-2.72z"
+                  ></path>
+                </svg>
+                <span>Lorem ipsum dolor sit amet</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  baseProfile="tiny"
+                  viewBox="0 0 24 24"
+                  height="24px"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-primary"
+                >
+                  <path
+                    d="M16.972 6.251c-.967-.538-2.185-.188-2.72.777l-3.713 6.682-2.125-2.125c-.781-.781-2.047-.781-2.828 0-.781.781-.781 2.047 0 2.828l4 4c.378.379.888.587 1.414.587l.277-.02c.621-.087 1.166-.46 1.471-1.009l5-9c.537-.966.189-2.183-.776-2.72z"
+                  ></path>
+                </svg>
+                <span>Lorem ipsum dolor sit amet</span>
+              </li>
+            </ul>
+            <ul class="space-y-2">
+              <li class="flex items-center space-x-2">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  baseProfile="tiny"
+                  viewBox="0 0 24 24"
+                  height="24px"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-primary"
+                >
+                  <path
+                    d="M16.972 6.251c-.967-.538-2.185-.188-2.72.777l-3.713 6.682-2.125-2.125c-.781-.781-2.047-.781-2.828 0-.781.781-.781 2.047 0 2.828l4 4c.378.379.888.587 1.414.587l.277-.02c.621-.087 1.166-.46 1.471-1.009l5-9c.537-.966.189-2.183-.776-2.72z"
+                  ></path>
+                </svg>
+                <span>Consectetur for adipiscing</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  baseProfile="tiny"
+                  viewBox="0 0 24 24"
+                  height="24px"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-primary"
+                >
+                  <path
+                    d="M16.972 6.251c-.967-.538-2.185-.188-2.72.777l-3.713 6.682-2.125-2.125c-.781-.781-2.047-.781-2.828 0-.781.781-.781 2.047 0 2.828l4 4c.378.379.888.587 1.414.587l.277-.02c.621-.087 1.166-.46 1.471-1.009l5-9c.537-.966.189-2.183-.776-2.72z"
+                  ></path>
+                </svg>
+                <span>Consectetur for adipiscing</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  version="1.2"
+                  baseProfile="tiny"
+                  viewBox="0 0 24 24"
+                  height="24px"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-primary"
+                >
+                  <path
+                    d="M16.972 6.251c-.967-.538-2.185-.188-2.72.777l-3.713 6.682-2.125-2.125c-.781-.781-2.047-.781-2.828 0-.781.781-.781 2.047 0 2.828l4 4c.378.379.888.587 1.414.587l.277-.02c.621-.087 1.166-.46 1.471-1.009l5-9c.537-.966.189-2.183-.776-2.72z"
+                  ></path>
+                </svg>
+                <span>Suspendisse viverra mauris eget</span>
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-wrap items-center sm:space-x-4 py-4">
+            <a
+              href="#"
+              class="pulse w-40 m-2 sm:m-0 text-white bg-gradient-to-tr from-secondary to-primary hover:from-primary hover:to-secondary py-3 px-8 rounded-full font-bold active:-translate-y-1 transition-all duration-300 capitalize"
+            >
+              Learn More
+            </a>
+            <a
+              href="#"
+              class="pulse w-40 m-2 sm:m-0 text-white bg-gradient-to-tr from-secondary to-primary hover:from-primary hover:to-secondary py-3 px-8 rounded-full font-bold active:-translate-y-1 transition-all duration-300 capitalize"
+            >
+              Watch Video
+            </a>
+          </div>
+        </div>
+        <div
+          data-aos="slide-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="false"
+          data-aos-once="true"
+          class="w-full lg:w-1/2 px-4 flex flex-wrap justify-center lg:justify-end text-white"
+        >
+          <a
+            href="#"
+            class="relative flex w-64 lg:w-52 xl:w-64 h-48 lg:h-44 xl:h-48 m-3 rounded-3xl hover:shadow-xl hover:shadow-gray-500 transition-all duration-300 overflow-hidden"
+          >
+            <img data-src="/agency/assets/1-500-84282503.webp" alt="conference 1" />
+            <div
+              class="absolute z-10 bottom-0 w-full flex flex-col items-center p-4 font-bold"
+            >
+              <div>
+                <p>Special Speaker for newbe</p>
+                <span class="text-xs">1st Season</span>
+              </div>
+            </div>
+            <!-- filter layer  -->
+            <div
+              class="filter-shadow absolute -bottom-8 -left-[10%] w-[120%] h-2/3 bg-gradient-to-tr from-secondary to-primary blur-xl opacity-95"
+            ></div>
+          </a>
+          <a
+            href="#"
+            class="relative flex w-64 lg:w-52 xl:w-64 h-48 lg:h-44 xl:h-48 m-3 rounded-3xl hover:shadow-xl hover:shadow-gray-500 transition-all duration-300 overflow-hidden"
+          >
+            <img data-src="/agency/assets/2-500-a6ce86c4.webp" alt="conference 1" />
+            <div
+              class="absolute z-10 bottom-0 w-full flex flex-col items-center p-4 font-bold"
+            >
+              <div>
+                <p>Special Speaker for newbe</p>
+                <span class="text-xs">1st Season</span>
+              </div>
+            </div>
+            <!-- filter layer  -->
+            <div
+              class="filter-shadow absolute -bottom-8 -left-[10%] w-[120%] h-2/3 bg-gradient-to-tr from-secondary to-primary blur-xl opacity-95"
+            ></div>
+          </a>
+          <a
+            href="#"
+            class="relative flex w-64 lg:w-52 xl:w-64 h-48 lg:h-44 xl:h-48 m-3 rounded-3xl hover:shadow-xl hover:shadow-gray-500 transition-all duration-300 overflow-hidden"
+          >
+            <img data-src="/agency/assets/3-500-5763e1ae.webp" alt="conference 1" />
+            <div
+              class="absolute z-10 bottom-0 w-full flex flex-col items-center p-4 font-bold"
+            >
+              <div>
+                <p>Special Speaker for newbe</p>
+                <span class="text-xs">1st Season</span>
+              </div>
+            </div>
+            <!-- filter layer  -->
+            <div
+              class="filter-shadow absolute -bottom-8 -left-[10%] w-[120%] h-2/3 bg-gradient-to-tr from-secondary to-primary blur-xl opacity-95"
+            ></div>
+          </a>
+          <a
+            href="#"
+            class="relative flex w-64 lg:w-52 xl:w-64 h-48 lg:h-44 xl:h-48 m-3 rounded-3xl hover:shadow-xl hover:shadow-gray-500 transition-all duration-300 overflow-hidden"
+          >
+            <img data-src="data:image/webp;base64,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" alt="conference 1" />
+            <div
+              class="absolute z-10 bottom-0 w-full flex flex-col items-center p-4 font-bold"
+            >
+              <div>
+                <p>Special Speaker for newbe</p>
+                <span class="text-xs">1st Season</span>
+              </div>
+            </div>
+            <!-- filter layer  -->
+            <div
+              class="filter-shadow absolute -bottom-8 -left-[10%] w-[120%] h-2/3 bg-gradient-to-tr from-secondary to-primary blur-xl opacity-95"
+            ></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Gallery  -->
+    <section class="relative z-0">
+      <div
+        class="max-w-7xl mx-auto px-4 py-12 lg:py-20 flex flex-col items-center text-center"
+      >
+        <div class="space-y-8 flex flex-col items-center">
+          <h3 class="after-line max-w-max">Event Gallery</h3>
+          <p>
+            Our Honorable spekar, who speak for you, i think whos every speach
+            are equal gold
+          </p>
+        </div>
+        <div
+          data-aos="slide-up"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="false"
+          data-aos-once="true"
+          class="w-full grid grid-rows-3 sm:grid-rows-2 grid-cols-2 sm:grid-cols-3 gap-4 lg:gap-8 pt-12 lg:pt-20"
+        >
+          <a
+            href="#"
+            class="relative z-0 col-start-1 col-end-2 flex h-[140px] md:h-[180px] lg:h-[240px] xl:h-[270px] overflow-hidden"
+          >
+            <img
+              data-src="/agency/assets/1-500-3d286e7b.webp"
+              alt=""
+              width="100%"
+              height="100%"
+            />
+            <!-- serch icon hover show  -->
+            <div
+              class="absolute z-10 w-full h-full flex justify-center items-center bg-primary text-white hover:opacity-80 transition-all duration-500 opacity-0"
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                height="36px"
+                width="36px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M304 192v32c0 6.6-5.4 12-12 12h-56v56c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-56h-56c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h56v-56c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v56h56c6.6 0 12 5.4 12 12zm201 284.7L476.7 505c-9.4 9.4-24.6 9.4-33.9 0L343 405.3c-4.5-4.5-7-10.6-7-17V372c-35.3 27.6-79.7 44-128 44C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 48.3-16.4 92.7-44 128h16.3c6.4 0 12.5 2.5 17 7l99.7 99.7c9.3 9.4 9.3 24.6 0 34zM344 208c0-75.2-60.8-136-136-136S72 132.8 72 208s60.8 136 136 136 136-60.8 136-136z"
+                ></path>
+              </svg>
+              <div
+                class="absolute bottom-4 right-6 font-bold text-right px-4 border-r-2 border-white"
+              >
+                <p>Main Speaker Speaking</p>
+                <span class="text-xs">Awesome Event 2023</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="#"
+            class="relative z-0 col-start-1 col-end-2 sm:col-start-2 sm:col-end-3 row-start-2 row-end-3 sm:row-start-1 sm:row-end-2 flex h-[140px] md:h-[180px] lg:h-[240px] xl:h-[270px] overflow-hidden"
+          >
+            <img
+              data-src="/agency/assets/4-25bb7417.webp"
+              alt=""
+              width="100%"
+              height="100%"
+            />
+            <!-- serch icon hover show  -->
+            <div
+              class="absolute z-10 w-full h-full flex justify-center items-center bg-primary text-white hover:opacity-80 transition-all duration-500 opacity-0"
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                height="36px"
+                width="36px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M304 192v32c0 6.6-5.4 12-12 12h-56v56c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-56h-56c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h56v-56c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v56h56c6.6 0 12 5.4 12 12zm201 284.7L476.7 505c-9.4 9.4-24.6 9.4-33.9 0L343 405.3c-4.5-4.5-7-10.6-7-17V372c-35.3 27.6-79.7 44-128 44C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 48.3-16.4 92.7-44 128h16.3c6.4 0 12.5 2.5 17 7l99.7 99.7c9.3 9.4 9.3 24.6 0 34zM344 208c0-75.2-60.8-136-136-136S72 132.8 72 208s60.8 136 136 136 136-60.8 136-136z"
+                ></path>
+              </svg>
+              <div
+                class="absolute bottom-4 right-6 font-bold text-right px-4 border-r-2 border-white"
+              >
+                <p>Main Speaker Speaking</p>
+                <span class="text-xs">Awesome Event 2023</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="relative z-0 col-start-1 col-end-3 sm:col-start-1 sm:col-end-3 row-start-3 row-end-4 sm:row-start-2 sm:row-end-3 flex h-[140px] md:h-[180px] lg:h-[240px] xl:h-[270px]"
+          >
+            <img
+              data-src="/agency/assets/1-720x300-8bd45f03.webp"
+              alt=""
+              width="100%"
+              height="100%"
+            />
+            <!-- serch icon hover show  -->
+            <div
+              class="absolute z-10 w-full h-full flex justify-center items-center bg-primary text-white hover:opacity-80 transition-all duration-500 opacity-0"
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                height="36px"
+                width="36px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M304 192v32c0 6.6-5.4 12-12 12h-56v56c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-56h-56c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h56v-56c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v56h56c6.6 0 12 5.4 12 12zm201 284.7L476.7 505c-9.4 9.4-24.6 9.4-33.9 0L343 405.3c-4.5-4.5-7-10.6-7-17V372c-35.3 27.6-79.7 44-128 44C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 48.3-16.4 92.7-44 128h16.3c6.4 0 12.5 2.5 17 7l99.7 99.7c9.3 9.4 9.3 24.6 0 34zM344 208c0-75.2-60.8-136-136-136S72 132.8 72 208s60.8 136 136 136 136-60.8 136-136z"
+                ></path>
+              </svg>
+              <div
+                class="absolute bottom-4 right-6 font-bold text-right px-4 border-r-2 border-white"
+              >
+                <p>Main Speaker Speaking</p>
+                <span class="text-xs">Awesome Event 2023</span>
+              </div>
+            </div>
+          </a>
+          <div
+            class="relative z-0 col-start-2 col-end-3 sm:col-start-3 sm:col-end-4 row-start-1 row-end-3 flex h-[296px] md:h-[376px] lg:h-[512px] xl:h-[572px]"
+          >
+            <img
+              data-src="/agency/assets/3v-500-6b1dab19.webp"
+              alt=""
+              width="100%"
+              height="100%"
+            />
+            <!-- serch icon hover show  -->
+            <div
+              class="absolute z-10 w-full h-full flex justify-center items-center bg-primary text-white hover:opacity-80 transition-all duration-500 opacity-0"
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                height="36px"
+                width="36px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M304 192v32c0 6.6-5.4 12-12 12h-56v56c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-56h-56c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h56v-56c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v56h56c6.6 0 12 5.4 12 12zm201 284.7L476.7 505c-9.4 9.4-24.6 9.4-33.9 0L343 405.3c-4.5-4.5-7-10.6-7-17V372c-35.3 27.6-79.7 44-128 44C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 48.3-16.4 92.7-44 128h16.3c6.4 0 12.5 2.5 17 7l99.7 99.7c9.3 9.4 9.3 24.6 0 34zM344 208c0-75.2-60.8-136-136-136S72 132.8 72 208s60.8 136 136 136 136-60.8 136-136z"
+                ></path>
+              </svg>
+              <div
+                class="absolute bottom-4 right-6 font-bold text-right px-4 border-r-2 border-white"
+              >
+                <p>Main Speaker Speaking</p>
+                <span class="text-xs">Awesome Event 2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- shedule steps section  -->
+    <section
+      class="relative z-10 w-full bg-gray-500 bg-no-repeat bg-cover text-white py-12 lg:py-20"
+      style="background-image: url(/agency/assets/1-1600-ec598a1b.webp)"
+    >
+      <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="false"
+        data-aos-once="true"
+        class="max-w-7xl mx-auto w-full h-full p-4 flex flex-col space-y-16"
+      >
+        <div class="space-y-8 flex flex-col items-center text-center">
+          <h3 class="after-line max-w-max">Event Schedule</h3>
+          <p>
+            Our Honorable spekar, who speak for you, i think whos every speach
+            are equal gold
+          </p>
+        </div>
+        <div
+          class="relative z-0 flex flex-col sm:flex-row justify-center items-center uppercase text-sm space-y-2 sm:space-y-0 sm:space-x-16 lg:space-x-36"
+        >
+          <div
+            class="w-40 cursor-pointer text-black hover:text-white bg-white hover:bg-gradient-to-tr hover:from-primary hover:to-secondary py-3 text-center rounded-md font-bold active:-translate-y-1 transition-all duration-300"
+          >
+            first DAY
+          </div>
+          <div
+            class="w-40 cursor-pointer text-white bg-gradient-to-tr from-secondary to-primary hover:from-primary hover:to-secondary py-3 text-center rounded-md font-bold active:-translate-y-1 transition-all duration-300"
+          >
+            SECOND DAY
+          </div>
+          <div
+            class="w-40 cursor-pointer text-black hover:text-white bg-white hover:bg-gradient-to-tr hover:from-primary hover:to-secondary py-3 text-center rounded-md font-bold active:-translate-y-1 transition-all duration-300"
+          >
+            Third DAY
+          </div>
+          <!-- line  -->
+          <div
+            class="absolute -z-10 hidden sm:block sm:w-[350px] lg:w-[600px] h-0.5 bg-white"
+          ></div>
+        </div>
+
+        <div class="flex flex-col justify-center items-center">
+          <a
+            href="#"
+            class="w-40 cursor-pointer text-white text-sm bg-gradient-to-tr from-secondary to-primary hover:from-primary hover:to-secondary py-3 text-center rounded-md font-bold active:-translate-y-1 transition-all duration-300"
+          >
+            1ST HALF
+          </a>
+          <div
+            class="relative flex flex-col justify-center py-4 sm:py-0 space-y-4 sm:space-y-0 w-11/12 sm:w-0.5 sm:h-[950px] lg:h-[650px] sm:bg-white"
+          >
+            <!-- right -->
+            <div class="sm:absolute z-0 left-8 top-8 sm:w-64 lg:w-[460px]">
+              <div
+                class="relative z-10 p-4 bg-gradient-to-t from-secondary to-primary rounded-md flex items-center justify-center space-x-4"
+              >
+                <div class="min-w-[64px] h-16 rounded-md flex overflow-hidden">
+                  <img
+                    data-src="/agency/assets/1-500-3d286e7b.webp"
+                    width="100%"
+                    height="100%"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h6 class="uppercase pb-2">VICE PRESIDENT</h6>
+                  <p>
+                    Raw denim you probably haven't heard of them jean shorts
+                    Austin. Nesciunt tofu stumptown
+                  </p>
+                </div>
+              </div>
+              <div
+                class="hidden sm:block absolute -z-10 bottom-0 -left-10 w-16"
+              >
+                <p class="absolute font-bold -left-16 -top-1 capitalize">
+                  april
+                </p>
+                <div
+                  class="absolute -left-1 -top-1 w-6 h-6 rounded-full bg-white border-4 border-primary"
+                ></div>
+                <svg
+                  class="text-primary"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 55.017 76.009"
+                >
+                  <path
+                    id="rect"
+                    d="M962.359,3422.987l50.87,32.6a3.5,3.5,0,0,1,1.591,4.071L995.87,3498.7c-.408.772-1.422-.039-2.238-1.741l-33.6-70.042a.2.2,0,0,1,.027-.223l2.109-3.52C962.224,3423.039,962.31,3422.955,962.359,3422.987Z"
+                    transform="translate(-960.009 -3422.98)"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- left  -->
+            <div
+              class="sm:absolute z-0 -left-[288px] lg:-left-[490px] top-[220px] lg:top-[170px] sm:w-64 lg:w-[460px]"
+            >
+              <div
+                class="relative z-10 p-4 bg-gradient-to-t from-secondary to-primary rounded-md flex items-center justify-center space-x-4"
+              >
+                <div class="min-w-[64px] h-16 rounded-md flex overflow-hidden">
+                  <img
+                    data-src="/agency/assets/2-500-ef41e257.webp"
+                    width="100%"
+                    height="100%"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h6 class="uppercase pb-2">KOMA MAL</h6>
+                  <p>
+                    Raw denim you probably haven't heard of them jean shorts
+                    Austin. Nesciunt tofu stumptown
+                  </p>
+                </div>
+              </div>
+              <div
+                class="hidden sm:block absolute -z-10 bottom-0 -right-10 w-16"
+              >
+                <p class="absolute font-bold -right-16 -top-1 capitalize">
+                  april
+                </p>
+                <div
+                  class="absolute -right-1 -top-1 w-6 h-6 rounded-full bg-white border-4 border-primary"
+                ></div>
+                <svg
+                  class="text-primary"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 54.955 76.478"
+                >
+                  <path
+                    id="rect"
+                    d="M954.737,3558.425l-50.812,32.8a3.531,3.531,0,0,0-1.589,4.1l18.928,39.282c.408.776,1.42-.039,2.236-1.752l33.562-70.473a.2.2,0,0,0-.027-.225l-2.107-3.542C954.872,3558.476,954.786,3558.393,954.737,3558.425Z"
+                    transform="translate(-902.129 -3558.418)"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="pt-4 sm:pt w-full flex justify-center items-center">
+              <a
+                href="#"
+                class="sm:mt-0 sm:absolute top-[450px] lg:top-[310px] -left-20 w-40 text-sm cursor-pointer text-white bg-gradient-to-tr from-secondary to-primary hover:from-primary hover:to-secondary py-3 text-center rounded-md font-bold active:-translate-y-1 transition-all duration-300"
+              >
+                2ND HALF
+              </a>
+            </div>
+            <!-- right -->
+            <div
+              class="sm:absolute z-0 left-8 top-[530px] lg:top-[380px] sm:w-64 lg:w-[460px]"
+            >
+              <div
+                class="relative z-10 p-4 bg-gradient-to-t from-secondary to-primary rounded-md flex items-center justify-center space-x-4"
+              >
+                <div class="min-w-[64px] h-16 rounded-md flex overflow-hidden">
+                  <img
+                    data-src="/agency/assets/1-500-3d286e7b.webp"
+                    width="100%"
+                    height="100%"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h6 class="uppercase pb-2">VICE PRESIDENT</h6>
+                  <p>
+                    Raw denim you probably haven't heard of them jean shorts
+                    Austin. Nesciunt tofu stumptown
+                  </p>
+                </div>
+              </div>
+              <div
+                class="hidden sm:block absolute -z-10 bottom-0 -left-10 w-16"
+              >
+                <p class="absolute font-bold right-20 -top-1 capitalize">
+                  january
+                </p>
+                <div
+                  class="absolute -left-1 -top-1 w-6 h-6 rounded-full bg-white border-4 border-primary"
+                ></div>
+                <svg
+                  class="text-primary"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 55.017 76.009"
+                >
+                  <path
+                    id="rect"
+                    d="M962.359,3422.987l50.87,32.6a3.5,3.5,0,0,1,1.591,4.071L995.87,3498.7c-.408.772-1.422-.039-2.238-1.741l-33.6-70.042a.2.2,0,0,1,.027-.223l2.109-3.52C962.224,3423.039,962.31,3422.955,962.359,3422.987Z"
+                    transform="translate(-960.009 -3422.98)"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- left  -->
+            <div
+              class="sm:absolute z-0 -left-[288px] lg:-left-[490px] top-[720px] lg:top-[510px] sm:w-64 lg:w-[460px]"
+            >
+              <div
+                class="relative z-10 p-4 bg-gradient-to-t from-secondary to-primary rounded-md flex items-center justify-center space-x-4"
+              >
+                <div class="min-w-[64px] h-16 rounded-md flex overflow-hidden">
+                  <img
+                    data-src="/agency/assets/2-500-ef41e257.webp"
+                    width="100%"
+                    height="100%"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h6 class="uppercase pb-2">KOMA MAL</h6>
+                  <p>
+                    Raw denim you probably haven't heard of them jean shorts
+                    Austin. Nesciunt tofu stumptown
+                  </p>
+                </div>
+              </div>
+              <div
+                class="hidden sm:block absolute -z-10 bottom-0 -right-10 w-16"
+              >
+                <p class="absolute font-bold -right-16 -top-1 capitalize">
+                  March
+                </p>
+                <div
+                  class="absolute -right-1 -top-1 w-6 h-6 rounded-full bg-white border-4 border-primary"
+                ></div>
+                <svg
+                  class="text-primary"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 54.955 76.478"
+                >
+                  <path
+                    id="rect"
+                    d="M954.737,3558.425l-50.812,32.8a3.531,3.531,0,0,0-1.589,4.1l18.928,39.282c.408.776,1.42-.039,2.236-1.752l33.562-70.473a.2.2,0,0,0-.027-.225l-2.107-3.542C954.872,3558.476,954.786,3558.393,954.737,3558.425Z"
+                    transform="translate(-902.129 -3558.418)"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="w-40 cursor-pointer text-white text-sm bg-gradient-to-tr from-secondary to-primary hover:from-primary hover:to-secondary py-3 text-center rounded-md font-bold active:-translate-y-1 transition-all duration-300"
+          >
+            MORE
+          </a>
+        </div>
+      </div>
+      <!-- layout gray  -->
+      <div
+        class="absolute top-0 left-0 -z-10 w-full h-full bg-black opacity-90"
+      ></div>
+    </section>
+
+    <!-- Event speaker  -->
+    <section class="relative z-0 bg-white">
+      <div
+        class="max-w-7xl mx-auto px-4 py-12 lg:py-20 flex flex-col items-center text-center"
+      >
+        <div class="space-y-8 flex flex-col items-center pb-10 lg:pb-16">
+          <h3 class="after-line max-w-max">Event Speaker</h3>
+          <p>
+            Our Honorable spekar, who speak for you, i think whos every speach
+            are equal gold
+          </p>
+        </div>
+        <!-- cards  -->
+        <div
+          data-aos="flip-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="false"
+          data-aos-once="true"
+          class="speaker-cards flex flex-wrap items-center justify-center"
+        >
+          <!-- card  -->
+          <div
+            class="speaker-card sm:order-1 lg:order-none flex flex-col sm:flex-row items-center px sm:w-[490px] xl:w-[600px] sm:h-[210px] xl:h-[280px] bg-black transition-all duration-300"
+          >
+            <div
+              class="speaker-card-image flex w-full sm:w-1/2 h-full duration-300"
+            >
+              <img
+                data-src="data:image/webp;base64,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"
+                width="100%"
+                height="100%"
+                alt=""
+              />
+            </div>
+            <div class="relative z-0 w-full sm:w-1/2 h-full">
+              <!-- arrow  -->
+              <div
+                class="speaker-card-body-arrow hidden sm:block duration-300 absolute -z-10 top-8 -left-2 w-4 h-4 bg-slate-200 rotate-45"
+              ></div>
+              <div
+                class="speaker-card-body bg-slate-200 w-full h-full flex flex-col justify-center space-y-4 text-start p-8 font-bold"
+              >
+                <h5 class="text-2xl">Elizabeth Jones</h5>
+                <p>Art Director</p>
+                <div
+                  class="speaker-card-border-bottom w-16 h-0.5 bg-gray-400"
+                ></div>
+                <!-- social icons -->
+                <div
+                  class="speaker-card-body-icons flex items-center space-x-3"
+                >
+                  <!-- facebook -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 320 512"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <!-- twitter -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <!-- vimeo -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.992 4.204c-.071 1.556-1.158 3.687-3.262 6.393-2.175 2.829-4.016 4.243-5.522 4.243-.933 0-1.722-.861-2.367-2.583L3.55 7.523C3.07 5.8 2.556 4.94 2.007 4.94c-.118 0-.537.253-1.254.754L0 4.724a209.56 209.56 0 0 0 2.334-2.081c1.054-.91 1.845-1.388 2.373-1.437 1.243-.123 2.01.728 2.298 2.553.31 1.968.526 3.19.646 3.666.36 1.631.756 2.446 1.186 2.445.334 0 .836-.53 1.508-1.587.671-1.058 1.03-1.863 1.077-2.415.096-.913-.263-1.37-1.077-1.37a3.022 3.022 0 0 0-1.185.261c.789-2.573 2.291-3.825 4.508-3.756 1.644.05 2.419 1.117 2.324 3.2z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <!-- youtube -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 1024 1024"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M941.3 296.1a112.3 112.3 0 0 0-79.2-79.3C792.2 198 512 198 512 198s-280.2 0-350.1 18.7A112.12 112.12 0 0 0 82.7 296C64 366 64 512 64 512s0 146 18.7 215.9c10.3 38.6 40.7 69 79.2 79.3C231.8 826 512 826 512 826s280.2 0 350.1-18.8c38.6-10.3 68.9-40.7 79.2-79.3C960 658 960 512 960 512s0-146-18.7-215.9zM423 646V378l232 133-232 135z"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card  -->
+          <div
+            class="speaker-card sm:order-3 lg:order-none flex flex-col sm:flex-row items-center px sm:w-[490px] xl:w-[600px] sm:h-[210px] xl:h-[280px] bg-black transition-all duration-300"
+          >
+            <div
+              class="speaker-card-image flex w-full sm:w-1/2 h-full duration-300"
+            >
+              <img
+                data-src="/agency/assets/2-500-8d2da2a6.webp"
+                width="100%"
+                height="100%"
+                alt=""
+              />
+            </div>
+            <div class="relative z-0 w-full sm:w-1/2 h-full">
+              <!-- arrow  -->
+              <div
+                class="speaker-card-body-arrow hidden sm:block duration-300 absolute -z-10 top-8 -left-2 w-4 h-4 bg-slate-200 rotate-45"
+              ></div>
+              <div
+                class="speaker-card-body bg-slate-200 w-full h-full flex flex-col justify-center space-y-4 text-start p-8 font-bold"
+              >
+                <h5 class="text-2xl">Elizabeth Jones</h5>
+                <p>Art Director</p>
+                <div
+                  class="speaker-card-border-bottom w-16 h-0.5 bg-gray-400"
+                ></div>
+                <!-- social icons -->
+                <div
+                  class="speaker-card-body-icons flex items-center space-x-3"
+                >
+                  <!-- facebook -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 320 512"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <!-- twitter -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <!-- vimeo -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.992 4.204c-.071 1.556-1.158 3.687-3.262 6.393-2.175 2.829-4.016 4.243-5.522 4.243-.933 0-1.722-.861-2.367-2.583L3.55 7.523C3.07 5.8 2.556 4.94 2.007 4.94c-.118 0-.537.253-1.254.754L0 4.724a209.56 209.56 0 0 0 2.334-2.081c1.054-.91 1.845-1.388 2.373-1.437 1.243-.123 2.01.728 2.298 2.553.31 1.968.526 3.19.646 3.666.36 1.631.756 2.446 1.186 2.445.334 0 .836-.53 1.508-1.587.671-1.058 1.03-1.863 1.077-2.415.096-.913-.263-1.37-1.077-1.37a3.022 3.022 0 0 0-1.185.261c.789-2.573 2.291-3.825 4.508-3.756 1.644.05 2.419 1.117 2.324 3.2z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <!-- youtube -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 1024 1024"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M941.3 296.1a112.3 112.3 0 0 0-79.2-79.3C792.2 198 512 198 512 198s-280.2 0-350.1 18.7A112.12 112.12 0 0 0 82.7 296C64 366 64 512 64 512s0 146 18.7 215.9c10.3 38.6 40.7 69 79.2 79.3C231.8 826 512 826 512 826s280.2 0 350.1-18.8c38.6-10.3 68.9-40.7 79.2-79.3C960 658 960 512 960 512s0-146-18.7-215.9zM423 646V378l232 133-232 135z"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card  -->
+          <div
+            class="speaker-card sm:order-2 lg:order-none flex flex-col sm:flex-row items-center px sm:w-[490px] xl:w-[600px] sm:h-[210px] xl:h-[280px] bg-black transition-all duration-300"
+          >
+            <div
+              class="speaker-card-image flex w-full sm:w-1/2 h-full duration-300 sm:order-2"
+            >
+              <img
+                data-src="data:image/webp;base64,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"
+                width="100%"
+                height="100%"
+                alt=""
+              />
+            </div>
+            <div class="relative z-0 w-full sm:w-1/2 h-full sm:order-1">
+              <!-- arrow  -->
+              <div
+                class="speaker-card-body-arrow hidden sm:block duration-300 absolute -z-10 top-8 -right-2 w-4 h-4 bg-slate-200 rotate-45"
+              ></div>
+              <div
+                class="speaker-card-body bg-slate-200 w-full h-full flex flex-col justify-center sm:items-end space-y-4 text-start p-8 font-bold"
+              >
+                <h5 class="text-2xl">Elizabeth Jones</h5>
+                <p>Art Director</p>
+                <div
+                  class="speaker-card-border-bottom w-16 h-0.5 bg-gray-400"
+                ></div>
+                <!-- social icons -->
+                <div
+                  class="speaker-card-body-icons flex items-center space-x-3"
+                >
+                  <!-- facebook -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 320 512"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <!-- twitter -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <!-- vimeo -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.992 4.204c-.071 1.556-1.158 3.687-3.262 6.393-2.175 2.829-4.016 4.243-5.522 4.243-.933 0-1.722-.861-2.367-2.583L3.55 7.523C3.07 5.8 2.556 4.94 2.007 4.94c-.118 0-.537.253-1.254.754L0 4.724a209.56 209.56 0 0 0 2.334-2.081c1.054-.91 1.845-1.388 2.373-1.437 1.243-.123 2.01.728 2.298 2.553.31 1.968.526 3.19.646 3.666.36 1.631.756 2.446 1.186 2.445.334 0 .836-.53 1.508-1.587.671-1.058 1.03-1.863 1.077-2.415.096-.913-.263-1.37-1.077-1.37a3.022 3.022 0 0 0-1.185.261c.789-2.573 2.291-3.825 4.508-3.756 1.644.05 2.419 1.117 2.324 3.2z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <!-- youtube -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 1024 1024"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M941.3 296.1a112.3 112.3 0 0 0-79.2-79.3C792.2 198 512 198 512 198s-280.2 0-350.1 18.7A112.12 112.12 0 0 0 82.7 296C64 366 64 512 64 512s0 146 18.7 215.9c10.3 38.6 40.7 69 79.2 79.3C231.8 826 512 826 512 826s280.2 0 350.1-18.8c38.6-10.3 68.9-40.7 79.2-79.3C960 658 960 512 960 512s0-146-18.7-215.9zM423 646V378l232 133-232 135z"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card  -->
+          <div
+            class="speaker-card sm:order-4 lg:order-none flex flex-col sm:flex-row items-center px sm:w-[490px] xl:w-[600px] sm:h-[210px] xl:h-[280px] bg-black transition-all duration-300"
+          >
+            <div
+              class="speaker-card-image flex w-full sm:w-1/2 h-full duration-300 sm:order-2"
+            >
+              <img
+                data-src="/agency/assets/4-500-8f3ebeb1.webp"
+                width="100%"
+                height="100%"
+                alt=""
+              />
+            </div>
+            <div class="relative z-0 w-full sm:w-1/2 h-full sm:order-1">
+              <!-- arrow  -->
+              <div
+                class="speaker-card-body-arrow hidden sm:block duration-300 absolute -z-10 top-8 -right-2 w-4 h-4 bg-slate-200 rotate-45"
+              ></div>
+              <div
+                class="speaker-card-body bg-slate-200 w-full h-full flex flex-col justify-center sm:items-end space-y-4 text-start p-8 font-bold"
+              >
+                <h5 class="text-2xl">Elizabeth Jones</h5>
+                <p>Art Director</p>
+                <div
+                  class="speaker-card-border-bottom w-16 h-0.5 bg-gray-400"
+                ></div>
+                <!-- social icons -->
+                <div
+                  class="speaker-card-body-icons flex items-center space-x-3"
+                >
+                  <!-- facebook -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 320 512"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <!-- twitter -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <!-- vimeo -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.992 4.204c-.071 1.556-1.158 3.687-3.262 6.393-2.175 2.829-4.016 4.243-5.522 4.243-.933 0-1.722-.861-2.367-2.583L3.55 7.523C3.07 5.8 2.556 4.94 2.007 4.94c-.118 0-.537.253-1.254.754L0 4.724a209.56 209.56 0 0 0 2.334-2.081c1.054-.91 1.845-1.388 2.373-1.437 1.243-.123 2.01.728 2.298 2.553.31 1.968.526 3.19.646 3.666.36 1.631.756 2.446 1.186 2.445.334 0 .836-.53 1.508-1.587.671-1.058 1.03-1.863 1.077-2.415.096-.913-.263-1.37-1.077-1.37a3.022 3.022 0 0 0-1.185.261c.789-2.573 2.291-3.825 4.508-3.756 1.644.05 2.419 1.117 2.324 3.2z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <!-- youtube -->
+                  <a
+                    href="#"
+                    class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 1024 1024"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M941.3 296.1a112.3 112.3 0 0 0-79.2-79.3C792.2 198 512 198 512 198s-280.2 0-350.1 18.7A112.12 112.12 0 0 0 82.7 296C64 366 64 512 64 512s0 146 18.7 215.9c10.3 38.6 40.7 69 79.2 79.3C231.8 826 512 826 512 826s280.2 0 350.1-18.8c38.6-10.3 68.9-40.7 79.2-79.3C960 658 960 512 960 512s0-146-18.7-215.9zM423 646V378l232 133-232 135z"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- event pricing  -->
+    <section
+      class="relative z-10 w-full bg-gray-500 bg-no-repeat bg-cover text-white py-12 lg:py-20"
+      style="background-image: url(/agency/assets/1-1600-ec598a1b.webp)"
+    >
+      <div class="max-w-7xl mx-auto w-full h-full p-4 flex flex-col space-y-16">
+        <div class="space-y-8 flex flex-col items-center text-center">
+          <h3 class="after-line max-w-max">Event Pricing</h3>
+          <p>
+            Our Honorable spekar, who speak for you, i think whos every speach
+            are equal gold
+          </p>
+        </div>
+        <!-- cards  -->
+        <div
+          class="w-full flex flex-col md:flex-row justify-center items-center md:space-x-8"
+        >
+          <!-- card  -->
+          <div
+            data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="true"
+            class="relative w-full md:w-1/3 z-0 m-4 px-4 py-12"
+          >
+            <div
+              class="w-full flex flex-col justify-center items-center text-center space-y-10"
+            >
+              <h1 class="font-normal opacity-90">$0.00</h1>
+              <div>
+                <h3
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary"
+                >
+                  FREE
+                </h3>
+                <span class="text-xs">for individuals</span>
+              </div>
+              <ul class="text-center">
+                <li class="p-3 border-b border-gray-500 opacity-90">
+                  Only 1 User uses
+                </li>
+                <li class="p-3 border-b border-gray-500 opacity-90">
+                  10 Projects for individuals
+                </li>
+                <li class="p-3 border-b border-gray-500 opacity-90">
+                  5GB of Storage + Unlimited Bandwitch
+                </li>
+                <li class="p-3 border-b border-gray-500 opacity-90">
+                  Unlimited Data
+                </li>
+                <li class="p-3 border-b border-gray-500 opacity-90">
+                  Fully Security Suite
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="pulse w-40 block cursor-pointer text-white bg-gradient-to-tr from-secondary to-primary hover:from-primary hover:to-secondary py-3 text-center rounded-md font-bold active:-translate-y-1 transition-all duration-300 uppercase"
+              >
+                buy now
+              </a>
+            </div>
+            <!-- white layout -->
+            <div
+              class="absolute top-0 left-0 -z-10 w-full h-full bg-white opacity-10"
+            ></div>
+          </div>
+          <!-- card  -->
+          <div
+            data-aos="flip-down"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="true"
+            class="relative w-full md:w-1/3 z-0 m-4 px-4 py-12"
+          >
+            <div
+              class="w-full flex flex-col justify-center items-center text-center space-y-10"
+            >
+              <h1 class="font-normal opacity-90 text-black">$9.99</h1>
+              <div>
+                <h3 class="opacity-90">STANDARD</h3>
+                <span class="text-xs">for Start-Ups</span>
+              </div>
+              <ul class="text-center">
+                <li class="p-3 border-b border-gray-300 opacity-90">5 Users</li>
+                <li class="p-3 border-b border-gray-300 opacity-90">
+                  50 Projects for Start-Ups
+                </li>
+                <li class="p-3 border-b border-gray-300 opacity-90">
+                  50GB of Storage + Unlimited Bandwitch
+                </li>
+                <li class="p-3 border-b border-gray-300 opacity-90">
+                  Unlimited Data
+                </li>
+                <li class="p-3 border-b border-gray-300 opacity-90">
+                  Fully Security Suite
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="pulse-white w-40 block cursor-pointer text-primary bg-white hover:from-primary hover:to-secondary py-3 text-center rounded-md font-bold active:-translate-y-1 transition-all duration-300 uppercase"
+              >
+                buy now
+              </a>
+            </div>
+            <!-- gradiant layout -->
+            <div
+              class="absolute top-0 left-0 -z-10 w-full h-full bg-gradient-to-t from-primary to-secondary"
+            ></div>
+          </div>
+          <!-- card  -->
+          <div
+            data-aos="flip-right"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="true"
+            class="relative w-full md:w-1/3 z-0 m-4 px-4 py-12"
+          >
+            <div
+              class="w-full flex flex-col justify-center items-center text-center space-y-10"
+            >
+              <h1 class="font-normal opacity-90">$0.00</h1>
+              <div>
+                <h3
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary"
+                >
+                  FREE
+                </h3>
+                <span class="text-xs">for individuals</span>
+              </div>
+              <ul class="text-center">
+                <li class="p-3 border-b border-gray-500 opacity-90">
+                  Only 1 User uses
+                </li>
+                <li class="p-3 border-b border-gray-500 opacity-90">
+                  10 Projects for individuals
+                </li>
+                <li class="p-3 border-b border-gray-500 opacity-90">
+                  5GB of Storage + Unlimited Bandwitch
+                </li>
+                <li class="p-3 border-b border-gray-500 opacity-90">
+                  Unlimited Data
+                </li>
+                <li class="p-3 border-b border-gray-500 opacity-90">
+                  Fully Security Suite
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="pulse w-40 block cursor-pointer text-white bg-gradient-to-tr from-secondary to-primary hover:from-primary hover:to-secondary py-3 text-center rounded-md font-bold active:-translate-y-1 transition-all duration-300 uppercase"
+              >
+                buy now
+              </a>
+            </div>
+            <!-- white layout -->
+            <div
+              class="absolute top-0 left-0 -z-10 w-full h-full bg-white opacity-10"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <!-- layout gray  -->
+      <div
+        class="absolute top-0 left-0 -z-10 w-full h-full bg-black opacity-90"
+      ></div>
+    </section>
+
+    <!-- contact section  -->
+    <section class="relative z-0">
+      <div
+        data-aos="fade-in"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="true"
+        class="max-w-7xl mx-auto px-4 py-12 lg:py-20 flex flex-col items-center text-center"
+      >
+        <div class="space-y-8 flex flex-col items-center pb-10 lg:pb-16">
+          <h3 class="after-line max-w-max">Contact Us</h3>
+          <p>
+            Our Honorable spekar, who speak for you, i think whos every speach
+            are equal gold
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row justify-between w-full space-y-16 md:space-y-0"
+        >
+          <div class="w-full md:w-1/3">
+            <form action="#" method="POST" class="space-y-4">
+              <!-- name  -->
+              <div class="relative">
+                <div class="absolute left-4 top-4 text-gray-400">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 512 512"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M256 288c79.5 0 144-64.5 144-144S335.5 0 256 0 112 64.5 112 144s64.5 144 144 144zm128 32h-55.1c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16H128C57.3 320 0 377.3 0 448v16c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48v-16c0-70.7-57.3-128-128-128z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  class="form-control block w-full px-4 pl-12 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary focus:outline-none"
+                  id="exampleFormControlInput2"
+                  placeholder="Name"
+                />
+              </div>
+              <!-- email  -->
+              <div class="relative">
+                <div class="absolute left-4 top-4 text-gray-400">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  class="form-control block w-full px-4 pl-12 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary focus:outline-none"
+                  id="exampleFormControlInput2"
+                  placeholder="Email Address"
+                />
+              </div>
+              <!-- subject  -->
+              <div class="relative">
+                <div class="absolute left-4 top-4 text-gray-400">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 576 512"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  class="form-control block w-full px-4 pl-12 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary focus:outline-none"
+                  id="exampleFormControlInput2"
+                  placeholder="Subject"
+                />
+              </div>
+              <textarea
+                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary focus:outline-none"
+                id="exampleFormControlTextarea1"
+                rows="8"
+                placeholder="type your message here"
+              ></textarea>
+              <button
+                type="submit"
+                class="pulse block cursor-pointer text-white bg-gradient-to-tr from-secondary to-primary hover:from-primary hover:to-secondary px-8 py-3 text-center rounded-md font-bold active:-translate-y-1 transition-all duration-300 uppercase"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+          <div class="w-full md:w-1/3 text-start px-8 space-y-6">
+            <h5>Contact Details</h5>
+            <!-- contact icons  -->
+            <div class="space-y-3">
+              <div class="flex space-x-2">
+                <div class="text-primary pt-2">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    version="1.1"
+                    viewBox="0 0 16 16"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 0c-2.761 0-5 2.239-5 5 0 5 5 11 5 11s5-6 5-11c0-2.761-2.239-5-5-5zM8 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+                    ></path>
+                  </svg>
+                </div>
+                <p>
+                  Level 13, 2 Elizabeth St, Melbourne, Victoria 3000, Australia
+                </p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <div class="text-primary">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"
+                    ></path>
+                  </svg>
+                </div>
+                <p>1800 452 308</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <div class="text-primary">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5z"
+                    ></path>
+                  </svg>
+                </div>
+                <p>+61 (8) 8234 3555</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <div class="text-primary">
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"
+                    ></path>
+                  </svg>
+                </div>
+                <p>hello@spiritapp.com</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <div class="text-primary">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"
+                    ></path>
+                  </svg>
+                </div>
+                <p>www.spiritapp.com</p>
+              </div>
+            </div>
+            <!-- social icons -->
+            <div class="speaker-card-body-icons flex items-center space-x-3">
+              <!-- facebook -->
+              <a
+                href="#"
+                class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+              >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 320 512"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                  ></path>
+                </svg>
+              </a>
+              <!-- twitter -->
+              <a
+                href="#"
+                class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+              >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                  ></path>
+                </svg>
+              </a>
+              <!-- vimeo -->
+              <a
+                href="#"
+                class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+              >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.992 4.204c-.071 1.556-1.158 3.687-3.262 6.393-2.175 2.829-4.016 4.243-5.522 4.243-.933 0-1.722-.861-2.367-2.583L3.55 7.523C3.07 5.8 2.556 4.94 2.007 4.94c-.118 0-.537.253-1.254.754L0 4.724a209.56 209.56 0 0 0 2.334-2.081c1.054-.91 1.845-1.388 2.373-1.437 1.243-.123 2.01.728 2.298 2.553.31 1.968.526 3.19.646 3.666.36 1.631.756 2.446 1.186 2.445.334 0 .836-.53 1.508-1.587.671-1.058 1.03-1.863 1.077-2.415.096-.913-.263-1.37-1.077-1.37a3.022 3.022 0 0 0-1.185.261c.789-2.573 2.291-3.825 4.508-3.756 1.644.05 2.419 1.117 2.324 3.2z"
+                  ></path>
+                </svg>
+              </a>
+              <!-- youtube -->
+              <a
+                href="#"
+                class="w-4 h-4 flex justify-center items-center hover:-translate-y-1"
+              >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 1024 1024"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M941.3 296.1a112.3 112.3 0 0 0-79.2-79.3C792.2 198 512 198 512 198s-280.2 0-350.1 18.7A112.12 112.12 0 0 0 82.7 296C64 366 64 512 64 512s0 146 18.7 215.9c10.3 38.6 40.7 69 79.2 79.3C231.8 826 512 826 512 826s280.2 0 350.1-18.8c38.6-10.3 68.9-40.7 79.2-79.3C960 658 960 512 960 512s0-146-18.7-215.9zM423 646V378l232 133-232 135z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3">
+            <img data-src="/agency/assets/map-15bed8f4.webp" width="100%" height="100%" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer  section -->
+    <footer class="relative z-10 w-full bg-ternary text-white py-12 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 flex flex-col">
+        <div
+          class="w-full flex flex-wrap lg:flex-nowrap justify-between items-start lg:space-x-8"
+        >
+          <div class="w-full sm:w-[46%] lg:w-[30%]">
+            <div class="space-y-8">
+              <h5 class="opacity-90">NEWSLETTER</h5>
+              <span class="opacity-80">Follow our newest </span>
+              <form action="#" class="space-y-8">
+                <!-- email  -->
+                <div class="relative">
+                  <div class="absolute left-4 top-4 text-gray-400">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control block w-full px-4 pl-12 py-2 text-xl font-normal text-gray-700 bg-transparent bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-primary focus:outline-none"
+                    id="exampleFormControlInput2"
+                    placeholder="Email Address"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="pulse block cursor-pointer text-white bg-gradient-to-tr from-secondary to-primary hover:from-primary hover:to-secondary px-8 py-3 text-center rounded-md font-bold active:-translate-y-1 transition-all duration-300 uppercase"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+          <div
+            class="w-full sm:w-[46%] lg:w-[40%] pt-12 lg:pt-0 flex justify-between items-center space-x-4"
+          >
+            <div class="w-1/3 opacity-90 space-y-8">
+              <h5>SERVICES</h5>
+              <ul class="space-y-4">
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Development</a></li>
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Illustration</a></li>
+                <li><a href="#">Branding</a></li>
+              </ul>
+            </div>
+            <div class="w-1/3 opacity-90 space-y-8">
+              <h5>COMPANY</h5>
+              <ul class="space-y-4">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Knowledgae base</a></li>
+                <li><a href="#">GStory</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="w-1/3 opacity-90 space-y-8">
+              <h5>SERVICES</h5>
+              <ul class="space-y-4">
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Development</a></li>
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Illustration</a></li>
+                <li><a href="#">Branding</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full lg:w-[30%] space-y-8 pt-12 lg:pt-0">
+            <h5 class="opacity-90 uppercase">Follow Us</h5>
+            <div class="w-full grid grid-cols-3 grid-rows-2 gap-2">
+              <div class="rounded-md h-28 sm:h-44 lg:h-24 flex overflow-hidden">
+                <img data-src="/agency/assets/1-500-3d286e7b.webp" alt="" />
+              </div>
+              <div class="rounded-md h-28 sm:h-44 lg:h-24 flex overflow-hidden">
+                <img data-src="/agency/assets/2-500-ef41e257.webp" alt="" />
+              </div>
+              <div class="rounded-md h-28 sm:h-44 lg:h-24 flex overflow-hidden">
+                <img data-src="/agency/assets/3-500-efc4cdce.webp" alt="" />
+              </div>
+              <div class="rounded-md h-28 sm:h-44 lg:h-24 flex overflow-hidden">
+                <img data-src="/agency/assets/1-500-3d286e7b.webp" alt="" />
+              </div>
+              <div class="rounded-md h-28 sm:h-44 lg:h-24 flex overflow-hidden">
+                <img data-src="/agency/assets/2-500-ef41e257.webp" alt="" />
+              </div>
+              <div class="rounded-md h-28 sm:h-44 lg:h-24 flex overflow-hidden">
+                <img data-src="/agency/assets/3-500-efc4cdce.webp" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- back to top -->
+    <button
+      onclick="Scrollback_topfunc()"
+      id="back-to-top-button"
+      title="Scroll back to top"
+      class="btn text-primary w-12 h-12"
+    >
+      <svg
+        stroke="currentColor"
+        fill="currentColor"
+        stroke-width="0"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM7.5 6.707 6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707z"
+        ></path>
+      </svg>
+    </button>
+    
+    <script type="module" crossorigin defer src="/agency/assets/main-452fe1e0.js"></script>
+  		
+	</body>
+</html>
